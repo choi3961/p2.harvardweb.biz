@@ -1,0 +1,36 @@
+/* This stylesheet document is for the index.php of project1 in Harvard class. */
+
+/* This is the base of total showing body */
+.container{ 
+	background-color:#99ff77; 
+	width:500px; 
+	margin: auto;
+}
+
+#menu{
+	background-color:#99ff77;
+	width:500px;
+	margin: auto;
+}
+
+
+
+
+
+
+/*
+h1{
+	text-align: center; 
+	background-color:#ccccaa;
+}
+
+h2{
+	background-color:#00cc00; 
+	text-align:center;
+}
+
+p{
+	text-align:left;
+	text-indent: 30px;
+}
+*/
