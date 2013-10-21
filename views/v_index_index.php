@@ -1,22 +1,18 @@
 
 	<div class='title'>
-	-----------------------------
-		This is title section
 
-	------------------------------
-	<br><br>
-	</div>
-	<div>
-	-----------------------------
-		This is body section
+		<h1> Wwlcome to <?=APP_NAME?><?php if($user) echo ', '.$user->first_name; ?></h1>
+		<?php echo "hello"; ?>
+		Sign up is free!!
 		<div>
-			Welcome!! Message part and sign up part
 			<form action = 'users/signup'>
 				<input type = 'submit' value = 'sign up'>
 			</form>
-			
 		</div>
-		<br>
+	<br><br>
+	</div>
+	<div class = 'body'>
+	
 		<div>
 			This is sign in part.
 			<form>
@@ -24,15 +20,10 @@
 			<input type='text'><br>
 			<input type='submit'>
 			</form>
-		</div>
-	--------------------------------	
-	<br><br>				
+		</div>				
 	</div>
-	<div>
-	--------------------------------
-		This is footer section.
-
-	---------------------------------	
+	<div class = 'footer'>
+	 Enjoy your time!
 	<br><br>	
 	</div>
 

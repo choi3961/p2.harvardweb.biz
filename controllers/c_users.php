@@ -3,7 +3,6 @@ class users_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
-        echo "users_controller construct called<br><br>";
     } 
 
     public function index() {
@@ -36,22 +35,35 @@ class users_controller extends base_controller {
  # Dump out the results of POST to see what the form submitted
     // print_r($_POST);
 
-    # Insert this user into the database
-    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
+        # More data we want stored with the user
+        $_POST['created']  = Time::now();
+        $_POST['modified'] = Time::now();
 
-    # For now, just confirm they've signed up - 
-    # You should eventually make a proper View for this
-    echo 'You\'re signed up';
+        # Encrypt the password  
+        $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
+
+        # Create an encrypted token via their email address and a random string
+        $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
+
+        # Insert this user into the database
+        $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
+
+
+        # For now, just confirm they've signed up - 
+        # You should eventually make a proper View for this
+        echo 'You\'re signed up';
 ///////////////////////////////////
     }
 
-    public function login() {
+    public function login($error = NULL) {
 
     # Setup view
         $this->template->content = View::instance('v_users_login');
         $this->template->title   = "Login";
+    # Pass data to the view
+        $this->template->content->error = $error;
 
-    # attach style.css
+    # attach style.css in the head
         $client_files_head = Array("/css/main.css");
         $this->template->client_files_head = Utils::load_client_files($client_files_head);
 
@@ -80,7 +92,7 @@ class users_controller extends base_controller {
         if(!$token) {
 
             # Send them back to the login page
-            Router::redirect("/users/login/");
+            Router::redirect("/users/login/error");
 
         # But if we did, login succeeded! 
         } else {
@@ -123,14 +135,19 @@ class users_controller extends base_controller {
 
     }
 
-    public function profile($user_name = NULL) {
+    public function profile() {
+        #If user is blank, they're not logged in; redirect them to the login page
+        if(!$this->user){
+            Router::redirect('/users/login');
+        }
 
-        if($user_name == NULL) {
-            echo "No user specified";
-        }
-        else {
-            echo "This is the profile for ".$user_name;
-        }
+        #If they weren't redirected away, continue:
+
+        #setup view
+        $this->template->content =View::instance('v_users_profile');
+        $this->template->title = "Profile of".$this->user->first_name;
+
+        echo $this->template;
     }
 
 } # end of the class

@@ -3,19 +3,36 @@
 /* This is the base of total showing body */
 .container{ 
 	background-color:#99ff77; 
-	width:500px; 
-	margin: auto;
+	width:700px; 
+	margin: 0 auto ;
+	font-size: 30px;
 }
 
 #menu{
-	background-color:#99ff77;
-	width:500px;
+	background-color:#aaaaaa;
+	width:700px;
 	margin: auto;
+	text-indent: 9px;
 }
 
+.title{
+	background-color: #65a065;
+}
 
+.body{
+	background-color: #dda0a0;
+}
 
+.footer{
 
+}
+
+.error{
+	color: #ff0000;
+}
+a{
+	text-decoration: none;
+}
 
 
 /*

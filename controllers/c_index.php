@@ -32,7 +32,7 @@ class index_controller extends base_controller {
 			echo $this->template;
 			//echo $client_files_head;
 			//echo $this->template->client_files_head;
-			print_r($this->template->client_files_head);
+			//print_r($this->template->client_files_head);
 
 
 

@@ -12,35 +12,31 @@
 
 <body>	
 	<div id='menu'>
-
-        <a href='/'>Home</a>
+        <a href='/'>Home | </a>
 
         <!-- Menu for users who are logged in -->
         <?php if($user): ?>
 
-            <a href='/users/logout'>Logout</a>
-            <a href='/users/profile'>Profile</a>
+            <a href='/users/logout'>Logout | </a>
+            <a href='/users/profile'>Profile | </a>
+            
+            <div style = 'float:right'> <?php if(isset($user)) echo " hello! &nbsp;&nbsp;&nbsp;"; ?> </div>
 
         <!-- Menu options for users who are not logged in -->
         <?php else: ?>
 
-            <a href='/users/signup'>Sign up</a>
-            <a href='/users/login'>Log in</a>
+            <a href='/users/signup'>Sign up | </a>
+            <a href='/users/login'>Log in | </a>
 
         <?php endif; ?>
 
+
     </div>
-    <br>
-
+ 
     <div class = "container">
-    This is container<br><br><br>
-
-
-	<?php if(isset($content)) echo $content; ?>
+  	<?php if(isset($content)) echo $content; ?>
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
-
-
     </div>
 </body>
 </html>
