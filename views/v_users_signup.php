@@ -1,4 +1,5 @@
-<form method='POST' action='/users/p_signup'>
+<div class='center'>
+<form method='POST' action='/users/p_signup' class='form-standard'>
 
     First Name<br>
     <input type='text' name='first_name'>
@@ -18,4 +19,5 @@
 
     <input type='submit'>
 
-</form>
+</form
+</div>

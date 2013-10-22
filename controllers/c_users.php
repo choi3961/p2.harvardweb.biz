@@ -90,6 +90,16 @@ class users_controller extends base_controller {
 
         # If we didn't get a token back, it means login failed
         if(!$token) {
+            #checking specifically email or password
+            /*
+                if(){
+                    
+                }
+                else(
+
+                )
+            */
+            #checking specifically email or password
 
             # Send them back to the login page
             Router::redirect("/users/login/error");
@@ -146,6 +156,10 @@ class users_controller extends base_controller {
         #setup view
         $this->template->content =View::instance('v_users_profile');
         $this->template->title = "Profile of".$this->user->first_name;
+
+        # attach style.css in the head
+        $client_files_head = Array("/css/main.css");
+        $this->template->client_files_head = Utils::load_client_files($client_files_head);
 
         echo $this->template;
     }

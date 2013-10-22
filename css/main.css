@@ -15,24 +15,56 @@
 	text-indent: 9px;
 }
 
-.title{
+.header{
 	background-color: #65a065;
+}
+.greetings{
+	float: right;
 }
 
 .body{
 	background-color: #dda0a0;
 }
+.center{
+	margin: auto; 
+	width: 300px;
+	background-color: #cccccc;
+	border-radius: 17px;
+	border-width: 9px;
+	border-color: #555555;
+}
+.cen-cen{
+	width:300px;
+	margin:auto;
+}
+.form-standard{
+
+}
+
+.form-standard input{
+	border-radius: 9px;
+	height:23px;
+	border-width: 3px;
+	border-color: #999999;
+}
 
 .footer{
 
 }
-
-.error{
-	color: #ff0000;
-}
 a{
 	text-decoration: none;
 }
+
+.input_style{
+	border-radius: 9px;
+	height:23px;
+	border-width: 3px;
+	border-color: #999999;
+}
+.error{
+	color: #ff0000;
+}
+
 
 
 /*

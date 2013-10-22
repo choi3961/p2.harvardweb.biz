@@ -20,8 +20,6 @@
             <a href='/users/logout'>Logout | </a>
             <a href='/users/profile'>Profile | </a>
             
-            <div style = 'float:right'> <?php if(isset($user)) echo " hello! &nbsp;&nbsp;&nbsp;"; ?> </div>
-
         <!-- Menu options for users who are not logged in -->
         <?php else: ?>
 
@@ -29,8 +27,10 @@
             <a href='/users/login'>Log in | </a>
 
         <?php endif; ?>
-
-
+    
+    <div class='greetings'>
+        <?php if($user) echo 'hello'; ?>
+    </div>
     </div>
  
     <div class = "container">

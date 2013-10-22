@@ -1,4 +1,5 @@
-<form method='POST' action='/users/p_login'>
+<div class='center'>
+<form method='POST' action='/users/p_login' class='form-standard'>
 
     Email<br>
     <input type='text' name='email'>
@@ -20,3 +21,4 @@
     <input type='submit' value='Log in'>
 
 </form>
+</div>
