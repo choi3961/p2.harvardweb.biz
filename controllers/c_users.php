@@ -16,8 +16,8 @@ class users_controller extends base_controller {
             $this->template->title   = "Sign Up";
             
         # attach style.css
-            $client_files_head = Array("/css/main.css");
-            $this->template->client_files_head = Utils::load_client_files($client_files_head);
+        //    $client_files_head = Array("/css/main.css");
+        //    $this->template->client_files_head = Utils::load_client_files($client_files_head);
 
         # Render template
             echo $this->template;
@@ -64,8 +64,8 @@ class users_controller extends base_controller {
         $this->template->content->error = $error;
 
     # attach style.css in the head
-        $client_files_head = Array("/css/main.css");
-        $this->template->client_files_head = Utils::load_client_files($client_files_head);
+     //   $client_files_head = Array("/css/main.css");
+     //   $this->template->client_files_head = Utils::load_client_files($client_files_head);
 
     # Render template
         echo $this->template;
@@ -119,7 +119,7 @@ class users_controller extends base_controller {
             setcookie("token", $token, strtotime('+1 year'), '/');
 
             # Send them to the main page - or whever you want them to go
-            Router::redirect("/");
+            Router::redirect("/posts/index");
 
         }
 
@@ -158,8 +158,8 @@ class users_controller extends base_controller {
         $this->template->title = "Profile of".$this->user->first_name;
 
         # attach style.css in the head
-        $client_files_head = Array("/css/main.css");
-        $this->template->client_files_head = Utils::load_client_files($client_files_head);
+        //$client_files_head = Array("/css/main.css");
+        //$this->template->client_files_head = Utils::load_client_files($client_files_head);
 
         echo $this->template;
     }

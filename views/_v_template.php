@@ -4,6 +4,7 @@
 	<title><?php if(isset($title)) echo $title; ?></title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 					
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
@@ -27,16 +28,25 @@
             <a href='/users/login'>Log in | </a>
 
         <?php endif; ?>
-    
-    <div class='greetings'>
-        <?php if($user) echo 'hello'; ?>
-    </div>
+
+        <a href="/posts/index">posts |</a>
+        <a href="">posts-following |</a>
+        <a href="/posts/add">add-posts |</a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+
+        <div class='greetings'>
+            <?php if($user) echo 'hello'; ?>
+        </div>
     </div>
  
-    <div class = "container">
+<div class = "container">
+    
   	<?php if(isset($content)) echo $content; ?>
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
-    </div>
+</div>
+    
 </body>
 </html>

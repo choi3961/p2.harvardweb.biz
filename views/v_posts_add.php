@@ -1,4 +1,5 @@
-<form method='POST' action='/posts/p_add'>
+<?php echo "hello303"; ?>
+<form method='POST' action='/posts/p_add' class='form-standard'>
 
     <label for='content'>New Post:</label><br>
     <textarea name='content' id='content'></textarea>

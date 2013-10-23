@@ -7,8 +7,11 @@
 		
 	<br><br>
 	</div>
+
 	<div class = 'body'>
-	
+
+
+
 		<div class='center'>
 			<br>LOG IN
 			<form method='POST' action='users/p_login' class='form-standard'>
@@ -18,8 +21,12 @@
 			<input type='text' name='password'><br>
 			<input type='submit' value='log in'>
 			</form>
-		</div>				
+		</div>
+
+						
+	
 	</div>
+
 	<div class = 'footer'>
 		<div class='cen-cen'>
 			Sign up is free!!
