@@ -49,7 +49,10 @@ class posts_controller extends base_controller {
         $this->template->title   = "All Posts";
 
         # Build the query
-        $q="select * from users";
+        $q="SELECT *
+            FROM posts
+            inner join users
+            on posts.user_id = users.user_id";
 
         
 
