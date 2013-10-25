@@ -14,7 +14,7 @@
 <body>	
 	<div id='menu'>
         <a href='/'>Home | </a>
-
+        
         <!-- Menu for users who are logged in -->
         <?php if($user): ?>
 
@@ -28,16 +28,29 @@
             <a href='/users/login'>Log in | </a>
 
         <?php endif; ?>
+        <a href="">USERS =|</a>
+        <a href='/users/logout'>Logout | </a>
+        <a href='/users/profile'>Profile | </a>
+        <a href='/users/signup'>Sign up | </a>
+        <a href='/users/login'>Log in | </a>
 
-        <a href="/posts/index">posts |</a>
-        <a href="">posts-following |</a>
-        <a href="/posts/add">add-posts |</a>
+
+        <a href="">POSTS =|</a>
+        <a href="/posts/index">index |</a>
+        <a href="/posts/users">users |</a>
+        <a href="/posts/add">add |</a>
+        <a href="/posts/follow">follow |</a>
+        <a href="/posts/unfollow">unfollow |</a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
         <a href=""></a>
         <a href=""></a>
         <a href=""></a>
 
         <div class='greetings'>
-            <?php if($user) echo 'hello'; ?>
+            <?php if($user) echo "hello $user->first_name"; ?>
         </div>
     </div>
  

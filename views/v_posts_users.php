@@ -1,7 +1,7 @@
 <?php foreach($users as $user): ?>
 
     <!-- Print this user's name -->
-    
+    <?php echo "**************************" ?>
     
     <?=$user['first_name'] ?> <?=$user['last_name'] ?>
 

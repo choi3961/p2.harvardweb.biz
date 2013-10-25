@@ -11,16 +11,16 @@ class posts_controller extends base_controller {
     }
 
     public function add() {
-echo "hello99";
+
         # Setup view
         $this->template->content = View::instance('v_posts_add');
-echo "hello100";
+
         $this->template->title   = "New Post";
-echo "hello  102";
+
 
         # Render template
         echo $this->template;
-echo "hello101";
+
     }
 
     public function p_add() {
@@ -45,34 +45,31 @@ echo "hello101";
 
         # Set up the View
         $this->template->content = View::instance('v_posts_index');
+
         $this->template->title   = "All Posts";
 
         # Build the query
-        $q = "SELECT  
-                posts.content AS content,
-                posts.user_id AS post_user_id,
-                posts.created,
-                users_users.user_id AS follower_id,
-                users.first_name,
-                users.last_name
-            FROM posts
-            INNER JOIN users_users
-            INNER JOIN users ON posts.user_id = users.user_id
-            WHERE users_users.user_id = 1
-            AND posts.user_id = users_users.user_id_followed";
+        $q="select * from users";
+
+        
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
     ////////////////////
-       echo $this->template->title;
+     //   echo "<pre>";
+     // print_r($posts) ;
+     // echo "</pre>";
+      // echo $this->template->title;
     ///////////////////
 
         # Pass data to the View
         $this->template->content->posts = $posts;
 
+        //echo $this->template->content;
+
         # Render the View
         echo $this->template;
-        echo $this->template->title;
+      //  echo $this->template->title;
     }
 
     public function users() {
@@ -80,6 +77,8 @@ echo "hello101";
     # Set up the View
     $this->template->content = View::instance("v_posts_users");
     $this->template->title   = "Users";
+
+//if($this->template->content){ echo "hello";}
 
     # Build the query to get all the users
     $q = "SELECT *
@@ -110,6 +109,9 @@ echo "hello101";
     # Pass data (users and connections) to the view
     $this->template->content->users       = $users;
     $this->template->content->connections = $connections;
+
+
+ //   echo $this->template->content;
 
 //echo "hello2";
 //print_r($users);
