@@ -1,19 +1,19 @@
 <div class='center'>
 <form method='POST' action='/users/p_signup' class='form-standard'>
 
-    First Name<br>
+    First Name <span class = 'required'>*</span><br>
     <input type='text' name='first_name'>
     <br><br>
 
-    Last Name<br>
+    Last Name <span class = 'required'>*</span><br>
     <input type='text' name='last_name'>
     <br><br>
 
-    Email<br>
+    Email <span class = 'required'>*</span><br>
     <input type='text' name='email'>
     <br><br>
 
-    Password<br>
+    Password <span class = 'required'>*</span><br>
     <input type='password' name='password'>
     <br><br>
 

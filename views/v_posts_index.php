@@ -1,14 +1,18 @@
-<?php foreach($posts as $post): ?>
+<div class = 'header'>POSTS</div>
+    <?php foreach($posts as $post): ?>
 
 <article>
-    <h1><?=$post['first_name']?> <?=$post['last_name']?> posted:</h1>
+    <div class = 'article-header'><h1><?=$post['first_name']?> <?=$post['last_name']?> posted:</h1></div>
 
-    <p><?=$post['content']?></p>
+    <div class = 'article-content'><p><?=$post['content']?></p></div>
 
-    <time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
+    <div class = 'article-time'><time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
         <?=Time::display($post['created'])?>
-    </time>
+    </time></div>
 
 </article>
 
 <?php endforeach; ?>
+
+
+

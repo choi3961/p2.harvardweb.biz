@@ -2,10 +2,14 @@
 
 /* This is the base of total showing body */
 .container{ 
-	background-color:#99ff77; 
+	background-color: #77ddcc;
 	width:700px; 
-	margin: 0 auto ;
-	font-size: 30px;
+	margin: 3px auto;
+	font-size: 19px;
+	border-style: inset;
+	border-width:7px;
+	border-color: gray;
+	
 }
 
 #menu{
@@ -17,37 +21,125 @@
 
 .header{
 	background-color: #65a065;
+	width: 700px;
+	margin:auto;
+	text-align: center;
+	font-size: 39px;
 }
 .greetings{
 	float: right;
 }
 
 .body{
-	background-color: #dda0a0;
+	background-color: #77ffa0;
 }
 .center{
-	margin: auto; 
+	margin: 0px auto; 
+	padding: 19px;
 	width: 300px;
-	background-color: #cccccc;
+	background-color: #ccdfcc;
 	border-radius: 17px;
 	border-width: 9px;
 	border-color: #555555;
+	
 }
 .cen-cen{
 	width:300px;
 	margin:auto;
+	
 }
 .form-standard{
-
+	margin-left:9px;
 }
 
 .form-standard input{
 	border-radius: 9px;
-	height:23px;
+	height:21px;
 	border-width: 3px;
 	border-color: #999999;
 }
+.form-standard textarea{
+	width: 270px;
+	height:50px;
+}
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 2px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+  background-color: #ffffff;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #f5f5f5;
+}
+article{
+	margin: 9px auto;
+	background-color: #dddddd;
+	width: 600px;
+	//padding: 50px;
+}
+
+.article-header{
+
+}
+.article-content{
+	text-align: center;
+}
+
+.article-time {
+	font-size: 15px;
+	text-align: right;
+	
+}
+
+.required{
+	color: red;
+}
 .footer{
 
 }

@@ -15,26 +15,29 @@ class users_controller extends base_controller {
             $this->template->content = View::instance('v_users_signup');
             $this->template->title   = "Sign Up";
             
-        # attach style.css
-        //    $client_files_head = Array("/css/main.css");
-        //    $this->template->client_files_head = Utils::load_client_files($client_files_head);
-
         # Render template
             echo $this->template;
     }
 
     public function p_signup() {
+        #error checking : if not fullfilled, send the error message.
+        if(!$_POST['first_name']||!$_POST['last_name']||!$_POST['email'] || !$_POST['password']){
+            die("You should fullfill all the inputs");
+        }
 
-        # Dump out the results of POST to see what the form submitted
-        echo '<pre>';
-        print_r($_POST);
-        echo '</pre>';   
+        #error checking : compare POST data with database data
+        $email = $_POST['email'];
+        $q = "select email from users
+             where email = $email";
+        $exist = DB::instance(DB_NAME)->select_field($q);     
+        //compare POST with database already registered
+        if($exist==$email){
+            die("Your email $email is already registered");
+        }
+        
 
 
-///////////////////////////////////
- # Dump out the results of POST to see what the form submitted
-    // print_r($_POST);
-
+    
         # More data we want stored with the user
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();
@@ -51,7 +54,8 @@ class users_controller extends base_controller {
 
         # For now, just confirm they've signed up - 
         # You should eventually make a proper View for this
-        echo 'You\'re signed up';
+        echo 'You\'re signed up as '. $_POST['first_name']." ". $_POST['last_name'];
+     
 ///////////////////////////////////
     }
 

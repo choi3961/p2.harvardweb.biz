@@ -6,7 +6,7 @@ class posts_controller extends base_controller {
 
         # Make sure user is logged in if they want to use anything in this controller
         if(!$this->user) {
-            die("Members only. <a href='/users/login'>Login</a>");
+            die("You have to log in to use this page. <a href='/users/login'>Login</a>");
         }
     }
 
@@ -81,8 +81,6 @@ class posts_controller extends base_controller {
     $this->template->content = View::instance("v_posts_users");
     $this->template->title   = "Users";
 
-//if($this->template->content){ echo "hello";}
-
     # Build the query to get all the users
     $q = "SELECT *
         FROM users";
@@ -91,12 +89,7 @@ class posts_controller extends base_controller {
     # Store the result array in the variable $users
     $users = DB::instance(DB_NAME)->select_rows($q);
 
-//if($users){echo "hello here3";}
 
-
-///////////////////////////////////////////
-    //echo $users;
-///////////////////////////////////
     # Build the query to figure out what connections does this user already have? 
     # I.e. who are they following
     $q = "SELECT * 
@@ -112,12 +105,6 @@ class posts_controller extends base_controller {
     # Pass data (users and connections) to the view
     $this->template->content->users       = $users;
     $this->template->content->connections = $connections;
-
-
- //   echo $this->template->content;
-
-//echo "hello2";
-//print_r($users);
 
     # Render the view
     echo $this->template;
