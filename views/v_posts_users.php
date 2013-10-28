@@ -1,3 +1,5 @@
+<div class = 'header'> users </div>
+
 <table class = 'table table-striped'>
     <thead>
             <tr>

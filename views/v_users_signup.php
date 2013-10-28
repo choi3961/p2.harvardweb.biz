@@ -1,3 +1,4 @@
+<div class = 'header'> sign up </div>
 <div class='center'>
 <form method='POST' action='/users/p_signup' class='form-standard'>
 

@@ -19,6 +19,15 @@
 	text-indent: 9px;
 }
 
+.trade-mark{
+	background-color: #65a065;
+	width: 700px;
+	margin:auto;
+	text-align: left;
+	text-indent: 9px;
+	font-size: 39px;
+}
+
 .header{
 	background-color: #65a065;
 	width: 700px;

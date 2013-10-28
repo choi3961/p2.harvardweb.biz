@@ -43,19 +43,16 @@
         <a href="/posts/follow">follow |</a>
         <a href="/posts/unfollow">unfollow |</a>
         <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-
+        
         <div class='greetings'>
             <?php if($user) echo "hello $user->first_name"; ?>
         </div>
     </div>
  
 <div class = "container">
+    <div class = 'trade-mark'>
+         SQUAWK
+    </div>
     
   	<?php if(isset($content)) echo $content; ?>
 

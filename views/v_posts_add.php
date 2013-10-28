@@ -1,3 +1,5 @@
+<div class = 'header'>add</div>
+
 <div class = 'center'>
 <?php echo "hello $user->first_name"; ?><br><br>
 <form method='POST' action='/posts/p_add' class='form-standard'>
