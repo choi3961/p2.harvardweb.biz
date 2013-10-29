@@ -56,13 +56,18 @@ class users_controller extends base_controller {
 ///////////////////////////////
         //sending mail when a user signed up
         //Mail::send(,,,,);
-        $to = "choi343434@daum.net";
-$subject = "Test mail";
-$message = "Hello! This is a simple email message.";
-$from = "choi3961@naver.com";
-$headers = "From:" . $from;
-mail($to,$subject,$message,$headers);
-echo "Mail Sent.";
+        $to[]    = Array("name" => APP_NAME, "email" => 'choi343434@daum.net');
+        $from    = Array("name" => APP_NAME, "email" => 'choi3961@naver.com');
+        $subject = "hello??????????";              
+    
+        $body = View::instance('v_email_example');
+    
+        # Send email
+        Email::send($to, $from, $subject, $body, true, '');
+        echo "Mail sent";
+        echo APP_NAME;
+        echo SYSTEM_EMAIL;
+        echo APP_EMAIL;
 
 
 
