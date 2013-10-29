@@ -15,6 +15,8 @@ class users_controller extends base_controller {
             $this->template->content = View::instance('v_users_signup');
             $this->template->title   = "Sign Up";
             
+            
+            
         # Render template
             echo $this->template;
     }
@@ -51,7 +53,20 @@ class users_controller extends base_controller {
         # Insert this user into the database
         $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
+///////////////////////////////
+        //sending mail when a user signed up
+        //Mail::send(,,,,);
+        $to = "choi343434@daum.net";
+$subject = "Test mail";
+$message = "Hello! This is a simple email message.";
+$from = "choi3961@naver.com";
+$headers = "From:" . $from;
+mail($to,$subject,$message,$headers);
+echo "Mail Sent.";
 
+
+
+////////////////////////////////////////////////
         # For now, just confirm they've signed up - 
         # You should eventually make a proper View for this
         echo 'You\'re signed up as '. $_POST['first_name']." ". $_POST['last_name'];

@@ -23,11 +23,14 @@
 	</div>
 
 	<div class = 'footer'>
-		<div >
+		<div>
 			&nbsp; Sign up is free!!
 			<form action = 'users/signup' class = 'form-standard'>
 				<input type = 'submit' value = 'sign up'>
 			</form>
+		</div>
+		<div> +1 feature:<br>
+			  +1 feature:
 		</div>
 	 
 	<br><br>	
