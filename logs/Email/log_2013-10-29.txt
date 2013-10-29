@@ -93,3 +93,73 @@ hello html body?
 </html>
  
 2013-10-29 3:43:39 - INFO --> FAILED TO SEND EMAIL 
+2013-10-29 9:01:11 - INFO --> -------------------------- 
+2013-10-29 9:01:11 - INFO --> Controller/Method: users/p_signup 
+2013-10-29 9:01:11 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-29 9:01:11 - INFO --> From: Squawk Scope (choi3961@naver.com) 
+2013-10-29 9:01:11 - INFO --> To: Squawk Scope (choi343434@daum.net),  
+2013-10-29 9:01:11 - INFO --> CC:  
+2013-10-29 9:01:11 - INFO --> BCC:  
+2013-10-29 9:01:11 - INFO --> Subject: hello?????????? 
+2013-10-29 9:01:11 - INFO --> Body: <html>
+<bocy>
+hello html body?
+</bocy>
+</html>
+ 
+2013-10-29 9:01:11 - INFO --> FAILED TO SEND EMAIL 
+2013-10-29 9:12:30 - INFO --> -------------------------- 
+2013-10-29 9:12:30 - INFO --> Controller/Method: users/p_signup 
+2013-10-29 9:12:30 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-29 9:12:30 - INFO --> From: Squawk Scope (choi3961@naver.com) 
+2013-10-29 9:12:30 - INFO --> To: Squawk Scope (choi343434@daum.net),  
+2013-10-29 9:12:30 - INFO --> CC:  
+2013-10-29 9:12:30 - INFO --> BCC:  
+2013-10-29 9:12:30 - INFO --> Subject: hello?????????? 
+2013-10-29 9:12:30 - INFO --> Body: <html>
+<bocy>
+hello html body?
+</bocy>
+</html>
+ 
+2013-10-29 9:12:30 - INFO --> FAILED TO SEND EMAIL 
+2013-10-29 9:17:31 - INFO --> -------------------------- 
+2013-10-29 9:17:31 - INFO --> Controller/Method: users/p_signup 
+2013-10-29 9:17:31 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-29 9:17:31 - INFO --> From: Squawk Scope (choi3961@naver.com) 
+2013-10-29 9:17:31 - INFO --> To: Squawk Scope (choi343434@daum.net),  
+2013-10-29 9:17:31 - INFO --> CC:  
+2013-10-29 9:17:31 - INFO --> BCC:  
+2013-10-29 9:17:31 - INFO --> Subject: hello?????????? 
+2013-10-29 9:17:31 - INFO --> Body: <html>
+<bocy>
+hello html body?
+</bocy>
+</html>
+ 
+2013-10-29 9:17:31 - INFO --> FAILED TO SEND EMAIL 
+2013-10-29 9:18:27 - INFO --> -------------------------- 
+2013-10-29 9:18:27 - INFO --> Controller/Method: users/p_signup 
+2013-10-29 9:18:27 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-29 9:18:27 - INFO --> From: Squawk Scope (choi3961@naver.com) 
+2013-10-29 9:18:27 - INFO --> To: Squawk Scope (choi343434@daum.net),  
+2013-10-29 9:18:27 - INFO --> CC:  
+2013-10-29 9:18:27 - INFO --> BCC:  
+2013-10-29 9:18:27 - INFO --> Subject: hello?????????? 
+2013-10-29 9:18:27 - INFO --> Body: <html>
+<bocy>
+hello html body?
+</bocy>
+</html>
+ 
+2013-10-29 9:18:27 - INFO --> FAILED TO SEND EMAIL 
+2013-10-29 9:37:23 - INFO --> -------------------------- 
+2013-10-29 9:37:23 - INFO --> Controller/Method: users/p_signup 
+2013-10-29 9:37:23 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@harvardweb.biz 
+2013-10-29 9:37:23 - INFO --> From: Squawk Scope (webmaster@harvardweb.biz) 
+2013-10-29 9:37:23 - INFO --> To: Squawk Scope (choi3961@naver.com),  
+2013-10-29 9:37:23 - INFO --> CC:  
+2013-10-29 9:37:23 - INFO --> BCC:  
+2013-10-29 9:37:23 - INFO --> Subject: hello?????????? 
+2013-10-29 9:37:23 - INFO --> Body: Hi, there 
+2013-10-29 9:37:23 - INFO --> FAILED TO SEND EMAIL 
