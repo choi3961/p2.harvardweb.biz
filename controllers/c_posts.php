@@ -10,6 +10,27 @@ class posts_controller extends base_controller {
         }
     }
 
+    // Shows a user's own posts.
+    public function mypage(){
+        $this->template->content = View::instance('v_posts_mypage');
+        $this->template->title = "My Page";
+        $q="SELECT 
+            content,
+            created,
+            user_id,
+            post_id
+            FROM posts
+            WHERE user_id = ".$this->user->user_id;
+
+        # Run the query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+    
+        # Pass data to the View
+        $this->template->content->posts = $posts;
+        
+        echo $this->template;
+    }
+
     public function add() {
 
         # Setup view
@@ -40,6 +61,50 @@ class posts_controller extends base_controller {
         echo "Your post has been added. <a href='/posts/add'>Add another</a>";
 
     }
+
+    // ///////////////update the post
+
+   
+    public function update($id) {
+
+        # Setup view
+        $this->template->content = View::instance('v_posts_update');
+
+        $this->template->title   = "Update";
+
+        $this->template->content->post_id = $id;
+
+        echo $this->template->content->post_id;
+
+        echo $id;
+        //echo $post_id;
+
+        # Render template
+        echo $this->template;
+    }
+        // update a post.
+    public function p_update($id){
+        $textarea = $_POST['content'];
+
+        $q="update posts
+            set content = '$textarea'
+            where post_id = $id;";
+        DB::instance(DB_NAME)->query($q);
+        Router::redirect('/posts/mypage');
+    }
+
+
+
+    // delete a post
+    public function remove($id){
+        $q = "delete from posts
+              where post_id = $id";
+        DB::instance(DB_NAME)->query($q);
+
+        Router::redirect('/posts/mypage');
+
+    }
+
 
     public function index() {
 

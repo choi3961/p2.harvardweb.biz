@@ -2,7 +2,7 @@
     <?php foreach($posts as $post): ?>
 <div class = 'article'>
 <article>
-    <div class = 'article-header'><h1><?=$post['first_name']?> <?=$post['last_name']?> posted:</h1></div>
+    <div class = 'article-header'><h1>You posted:</h1></div>
 
     <div class = 'article-content'><p><?=$post['content']?></p></div>
 
@@ -11,6 +11,17 @@
     </time></div>
 
 </article>
+</div>
+<div class = 'article-control'>
+	<div><form action = "/posts/update/<?=$post['post_id']?>" method = "post" >
+			<input type = 'submit' value = 'update'>
+		</form>
+	</div>
+	<div><form action = "/posts/remove/<?=$post['post_id']?>" method = "post" >
+			<input type = 'submit' value = 'remove'>
+		</form>
+	</div>
+	
 </div>
 
 <?php endforeach; ?>

@@ -27,6 +27,9 @@
 	text-indent: 9px;
 	font-size: 39px;
 }
+.trade-mark:hover{
+	color: red;
+}
 
 .header{
 	background-color: #65a065;
@@ -66,6 +69,15 @@
 	height:21px;
 	border-width: 3px;
 	border-color: #999999;
+}
+
+.form-standard input[type = 'submit']{
+	width:90px;
+	height: 30px;
+}
+
+.form-standard input[type]:hover{
+	background-color: #ff3355;
 }
 .form-standard textarea{
 	width: 270px;
@@ -126,12 +138,22 @@ table {
 .table-hover tbody tr:hover > th {
   background-color: #f5f5f5;
 }
-article{
-	margin: 9px auto;
+.article{
+	margin: 9px 9px 9px 19px;
 	background-color: #dddddd;
-	width: 600px;
-	//padding: 50px;
+	width: 550px;
+	padding: 0 10px 10px 10px ;
+	display:inline-block;
 }
+
+.article-control{
+	display:inline-block;
+}
+
+.article-control input[type='submit']:hover{
+	background-color: gray;
+}
+
 
 .article-header{
 
@@ -143,7 +165,6 @@ article{
 .article-time {
 	font-size: 15px;
 	text-align: right;
-	
 }
 
 .required{
@@ -160,6 +181,11 @@ article{
 }
 a{
 	text-decoration: none;
+}
+
+a:hover{
+	background-color: #ffcccc;
+	font-weight: bold;
 }
 
 .input_style{
