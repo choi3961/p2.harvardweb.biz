@@ -1,14 +1,14 @@
-/* This stylesheet document is for the index.php of project1 in Harvard class. */
+/* This stylesheet document is main style of project2 in Harvard class. */
 
 /* This is the base of total showing body */
 .container{ 
-	background-color: #77ddcc;
+	background-color: #aaffaa;
 	width:700px; 
 	margin: 3px auto;
 	font-size: 19px;
 	border-style: inset;
-	border-width:7px;
-	border-color: gray;
+	border-width:5px;
+	border-color: #aaccaa;
 	
 }
 
@@ -20,7 +20,7 @@
 }
 
 .trade-mark{
-	background-color: #65a065;
+	background-color: #aaaa33;
 	width: 700px;
 	margin:auto;
 	text-align: left;
@@ -32,12 +32,13 @@
 }
 
 .header{
-	background-color: #65a065;
+	background-color: #aaaa33;
 	width: 700px;
 	margin:auto;
 	text-align: center;
 	font-size: 39px;
 }
+
 .greetings{
 	float: right;
 }
@@ -45,6 +46,7 @@
 .body{
 	background-color: #77ffa0;
 }
+
 .center{
 	margin: 0px auto; 
 	padding: 19px;
@@ -53,13 +55,13 @@
 	border-radius: 17px;
 	border-width: 9px;
 	border-color: #555555;
-	
 }
+
 .cen-cen{
 	width:300px;
 	margin:auto;
-	
 }
+
 .form-standard{
 	margin-left:9px;
 }
@@ -79,10 +81,12 @@
 .form-standard input[type]:hover{
 	background-color: #ff3355;
 }
+
 .form-standard textarea{
 	width: 270px;
 	height:50px;
 }
+
 table {
   max-width: 100%;
   background-color: transparent;
@@ -95,8 +99,7 @@ table {
   margin-bottom: 20px;
 }
 
-.table th,
-.table td {
+.table th, .table td {
   padding: 8px;
   line-height: 20px;
   text-align: left;
@@ -138,11 +141,12 @@ table {
 .table-hover tbody tr:hover > th {
   background-color: #f5f5f5;
 }
+
 .article{
 	margin: 9px 9px 9px 19px;
 	background-color: #dddddd;
-	width: 550px;
-	padding: 0 10px 10px 10px ;
+	width: 570px;
+	padding: 0 3px 3px 10px ;
 	display:inline-block;
 }
 
@@ -153,7 +157,6 @@ table {
 .article-control input[type='submit']:hover{
 	background-color: gray;
 }
-
 
 .article-header{
 
@@ -170,15 +173,21 @@ table {
 .required{
 	color: red;
 }
+
 .footer{
-	background-color: #65a065;
+	background-color: #aaaa33;
 	width: 700px;
 	margin:auto;
 	text-align: center;
 	font-size: 20px;	
 	height:50px;
-
 }
+
+.footer-lefter{
+	text-indent: 10px;
+	float:left;
+}
+
 a{
 	text-decoration: none;
 }
@@ -194,25 +203,8 @@ a:hover{
 	border-width: 3px;
 	border-color: #999999;
 }
+
 .error{
 	color: #ff0000;
 }
 
-
-
-/*
-h1{
-	text-align: center; 
-	background-color:#ccccaa;
-}
-
-h2{
-	background-color:#00cc00; 
-	text-align:center;
-}
-
-p{
-	text-align:left;
-	text-indent: 30px;
-}
-*/

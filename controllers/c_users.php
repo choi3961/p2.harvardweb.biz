@@ -1,4 +1,5 @@
 <?php
+# This class contols the users requests
 class users_controller extends base_controller {
 
     public function __construct() {
@@ -7,18 +8,15 @@ class users_controller extends base_controller {
 
     public function index() {
         echo "This is the index page";
-
     }
 
     public function signup() {
         # Setup view
-            $this->template->content = View::instance('v_users_signup');
-            $this->template->title   = "Sign Up";
-            
-            
-            
+        $this->template->content = View::instance('v_users_signup');
+        $this->template->title   = "Sign Up";
+             
         # Render template
-            echo $this->template;
+        echo $this->template;
     }
 
     public function p_signup() {
@@ -37,9 +35,6 @@ class users_controller extends base_controller {
             die("Your email $email is already registered");
         }
         
-
-
-    
         # More data we want stored with the user
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();
@@ -53,14 +48,11 @@ class users_controller extends base_controller {
         # Insert this user into the database
         $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
-///////////////////////////////
         //sending mail when a user signed up
-        //Mail::send(,,,,);
         $to[]    = Array("name" => APP_NAME, "email" => "choi3961@naver.com");
         $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
         $subject = "hello??????????";              
-    
-        $body = "Hi, there";
+        $body = View::instance('v_email_example');
         $cc = "";
         $bcc = "";
     
@@ -68,30 +60,21 @@ class users_controller extends base_controller {
         Email::send($to, $from, $subject, $body, true, $cc, $bcc);
         echo "Mail sent";
         
-
-////////////////////////////////////////////////
         # For now, just confirm they've signed up - 
         # You should eventually make a proper View for this
         echo 'You\'re signed up as '. $_POST['first_name']." ". $_POST['last_name'];
-     
-///////////////////////////////////
     }
 
     public function login($error = NULL) {
 
-    # Setup view
+        # Setup view
         $this->template->content = View::instance('v_users_login');
         $this->template->title   = "Login";
-    # Pass data to the view
+        # Pass data to the view
         $this->template->content->error = $error;
 
-    # attach style.css in the head
-     //   $client_files_head = Array("/css/main.css");
-     //   $this->template->client_files_head = Utils::load_client_files($client_files_head);
-
-    # Render template
+        # Render template
         echo $this->template;
-
     }
     public function p_login() {
 
@@ -128,7 +111,6 @@ class users_controller extends base_controller {
 
         # But if we did, login succeeded! 
         } else {
-
             /* 
             Store this token in a cookie using setcookie()
             Important Note: *Nothing* else can echo to the page before setcookie is called
@@ -142,9 +124,7 @@ class users_controller extends base_controller {
 
             # Send them to the main page - or whever you want them to go
             Router::redirect("/posts/index");
-
         }
-
     }
 
     public function logout() {
@@ -185,5 +165,4 @@ class users_controller extends base_controller {
 
         echo $this->template;
     }
-
 } # end of the class
