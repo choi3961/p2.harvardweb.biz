@@ -3,7 +3,7 @@
 <?php foreach($posts as $post): ?>
 	<div class = 'article'>
 		<article>
-		    <div class = 'article-header'><h1>You posted:</h1></div>
+		    <div class = 'article-header'><h3>You posted:</h3></div>
 		    <div class = 'article-content'><p><?=$post['content']?></p></div>
 		    <div class = 'article-time'>
 		    	<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
@@ -20,11 +20,8 @@
 		</div>
 		<div>
 			<form action = "/posts/remove/<?=$post['post_id']?>" method = "post" >
-				<input type = 'submit' value = 'remove'>
+				<input type = 'submit' value = 'remove' onClick = "return confirm('Will you really remove this post?');">
 			</form>
 		</div>
 	</div>
 <?php endforeach; ?>
-
-
-

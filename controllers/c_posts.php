@@ -65,11 +65,20 @@ class posts_controller extends base_controller {
 
     # renders a page to update a post on
     public function update($id) {
-
         # Setup view
         $this->template->content = View::instance('v_posts_update');
-
         $this->template->title   = "Update";
+
+        $q="SELECT 
+            content
+            FROM posts
+            WHERE post_id = ".$id;
+
+        # Run the query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+
+        # Pass data to the View
+        $this->template->content->posts = $posts;
 
         $this->template->content->post_id = $id;
 
