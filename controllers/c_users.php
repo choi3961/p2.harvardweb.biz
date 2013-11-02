@@ -27,8 +27,14 @@ class users_controller extends base_controller {
 
         #error checking : compare POST data with database data
         $email = $_POST['email'];
+////////////
+        echo "//////////////////////";
+        echo $email;
+        echo "//";
+///////////        
+
         $q = "select email from users
-             where email = $email";
+             where email = '$email'";
         $exist = DB::instance(DB_NAME)->select_field($q);     
         //compare POST with database already registered
         if($exist==$email){
