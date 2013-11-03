@@ -19,8 +19,8 @@ The file manifest
 * c_index.php : controller for the landing page.
 * c_posts.php : controller for the posts pages.
 * c_users.php : controller for the users.
-* _v_template.php : template for all the pages.
-* _v_email_exampe.php : email sending format.
+* v_template.php : template for all the pages.
+* v_email_exampe.php : email sending format.
 * v_index_index.php : landing page format.
 * v_posts_add.php : page for new post.
 * v_posts_index.php : page for the post a user follow.
