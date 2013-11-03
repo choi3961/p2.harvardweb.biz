@@ -52,7 +52,7 @@ class users_controller extends base_controller {
         //sending mail when a user signed up
         $to[]    = Array("name" => APP_NAME, "email" => $email);
         $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
-        $subject = "hello??????????";              
+        $subject = "Message from SQUAWK";              
         $body = View::instance('v_email_example');
         $cc = "";
         $bcc = "";

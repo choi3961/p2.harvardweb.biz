@@ -33,7 +33,7 @@
 				<input type = 'submit' value = 'sign up'>
 			</form>
 		</div>
-		<div class = 'footer-lefter'> +1 features: delete, update, mail
+		<div class = 'footer-lefter'> +1 features: delete a post, update a post, mail sending when signed up.
 		</div>	
 	</div>
 
