@@ -23,6 +23,7 @@ The file manifest
 
 Changelogs
 ----------
-* 2013-09-13 index.php and main.css are validated.
-* 2013-09-14 Finally validated in local computer.
-* 2013-09-15 Commented for the index.php and main.css.
+* 2013-10-30 all the pages are completed.
+* 2013-11-1 index.php and main.css are validated.
+* 2013-11-2 Finally validated in local computer.
+* 2013-11-3 Commented for all the documents including css files.
