@@ -8,7 +8,8 @@
 
 	<div class = 'body'>
 		<div class='center'>
-			<div>&nbsp; LOG IN</div>
+			<?php if(!$user): ?>
+				<div>&nbsp; LOG IN</div>
 				<form method='POST' action='users/p_login' class='form-standard'>
 					email<br>
 					<input type='text' name='email'><br>
@@ -16,6 +17,12 @@
 					<input type='password' name='password'><br><br>
 					<input type='submit' value='log in'><br>
 				</form>
+			<?php else: ?>
+				<div>Go to <a href="/posts/add">post</a></div>
+				<div>Go to <a href="/posts/mypage">myposts</a></div>
+				<div>Go to <a href="/posts/index">index</a></div>
+
+			<?php endif ?>
 		</div>
 	</div>
 

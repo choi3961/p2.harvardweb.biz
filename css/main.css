@@ -14,7 +14,7 @@
 
 #menu{
 	background-color:#cccccc;
-	width:900px;
+	width:700px;
 	margin: auto;
 	text-indent: 9px;
 	font-size: 17px;
@@ -80,7 +80,7 @@
 }
 
 .form-standard input[type]:hover{
-	background-color: #ff3355;
+	background-color: #cccccc;
 }
 
 .form-standard textarea{
@@ -146,9 +146,8 @@ table {
 .article{
 	margin: 9px 9px 9px 19px;
 	background-color: #dddddd;
-	width: 570px;
+	width: 650px;
 	padding: 0 3px 3px 10px ;
-	display:inline-block;
 }
 
 .article-control{
@@ -160,7 +159,7 @@ table {
 }
 
 .article-header{
-
+	font-weight: bold;
 }
 .article-content{
 	text-align: center;
@@ -169,6 +168,14 @@ table {
 .article-time {
 	font-size: 15px;
 	text-align: right;
+}
+
+.myposts{
+	margin: 9px 9px 9px 19px;
+	background-color: #dddddd;
+	width: 570px;
+	padding: 0 3px 3px 10px ;
+	display:inline-block;
 }
 
 .required{
@@ -194,7 +201,7 @@ a{
 }
 
 a:hover{
-	background-color: #ffcccc;
+	background-color: #cccccc;
 	font-weight: bold;
 }
 

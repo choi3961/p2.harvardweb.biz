@@ -27,11 +27,6 @@ class users_controller extends base_controller {
 
         #error checking : compare POST data with database data
         $email = $_POST['email'];
-////////////
-        echo "//////////////////////";
-        echo $email;
-        echo "//";
-///////////        
 
         $q = "select email from users
              where email = '$email'";
@@ -63,7 +58,7 @@ class users_controller extends base_controller {
         $bcc = "";
     
         # Send email
-        Email::send($to, $from, $subject, $body, true, $cc, $bcc);
+        //Email::send($to, $from, $subject, $body, true, $cc, $bcc);
         echo "Mail sent. ";
         
         # For now, just confirm they've signed up - 

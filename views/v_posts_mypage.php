@@ -1,9 +1,9 @@
 <!-- This displays the user's own page -->
 <div class = 'header'>POSTS</div>
 <?php foreach($posts as $post): ?>
-	<div class = 'article'>
+	<div class = 'myposts'>
 		<article>
-		    <div class = 'article-header'><h3>You posted:</h3></div>
+		    <div class = 'article-header'>You posted:</div>
 		    <div class = 'article-content'><p><?=$post['content']?></p></div>
 		    <div class = 'article-time'>
 		    	<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">

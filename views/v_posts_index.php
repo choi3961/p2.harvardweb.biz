@@ -3,7 +3,7 @@
 <?php foreach($posts as $post): ?>
 	<div class = 'article'>
 		<article>
-		    <div class = 'article-header'><h3><?=$post['first_name']?> <?=$post['last_name']?> posted:</h3></div>
+		    <div class = 'article-header'><?=$post['first_name']?> <?=$post['last_name']?> posted:</div>
 		    <div class = 'article-content'><p><?=$post['content']?></p></div>
 		    <div class = 'article-time'>
 		    	<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
