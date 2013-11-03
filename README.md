@@ -19,7 +19,6 @@ The file manifest
 * c_index.php : controller for the landing page.
 * c_posts.php : controller for the posts pages.
 * c_users.php : controller for the users.
-
 * _v_template.php : template for all the pages.
 * _v_email_exampe.php : email sending format.
 * v_index_index.php : landing page format.
@@ -28,11 +27,9 @@ The file manifest
 * v_posts_mypage.php : page for my posts.
 * v_posts_update.php : page for update a post.
 * v_posts_users.php : page of all the users.
-
 * v_users_login.php : page for login.
 * v_users_profile.php : page of porfile of a user.
 * v_users_signup.php : page for signup.
-
 * main.css : stylesheet file for all the pages.
 
 
