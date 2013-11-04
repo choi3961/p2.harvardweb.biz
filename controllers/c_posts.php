@@ -7,7 +7,7 @@ class posts_controller extends base_controller {
 
         # Make sure user is logged in if they want to use anything in this controller
         if(!$this->user) {
-            Router::redirect('/users/login');
+            Router::redirect('/users/login/login');
         }
     }
 
@@ -38,14 +38,14 @@ class posts_controller extends base_controller {
 
         # Setup view
         $this->template->content = View::instance('v_posts_add');
-
+        # title of the webpage
         $this->template->title   = "New Post";
 
         # Render template
         echo $this->template;
     }
 
-    # Process the add request.
+    # Process the add request of posting into the database.
     public function p_add() {
 
         # Associate this post with this user

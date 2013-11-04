@@ -1,4 +1,4 @@
-<!-- This displays the user's own page -->
+<!-- This displays the user's own page of posts -->
 <div class = 'header'>POSTS</div>
 
 <?php foreach($posts as $post): ?>

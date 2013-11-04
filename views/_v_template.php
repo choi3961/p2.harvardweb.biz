@@ -9,7 +9,7 @@
     	<?php if(isset($client_files_head)) echo $client_files_head; ?>
     </head>
     <body>	
-        <!-- This is the interface for the pages the users use easily -->
+        <!-- This is the interface for the pages the users could access through easily -->
     	<div id='menu'>
             <a href='/'>Home  </a> |
             <a href = '/posts/mypage/'> myposts </a> |
@@ -31,6 +31,7 @@
                 <?php if($user) echo "hello $user->first_name"; ?>
             </div>
         </div>
+        
         <!-- contains whole bunch of contents -->
         <div class = "container">
             <!--Trade mark of the application. -->

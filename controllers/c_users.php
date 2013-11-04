@@ -1,5 +1,5 @@
 <?php
-# This class contols the users requests
+# This class contols the users requests. i,e, sign up or log in, etc.
 class users_controller extends base_controller {
 
     public function __construct() {
@@ -9,7 +9,7 @@ class users_controller extends base_controller {
     public function index() {
         echo "This is the index page";
     }
-
+    # renders interface of sign up
     public function signup($error = NULL, $failed = NULL) {
         # Setup view
         $this->template->content = View::instance('v_users_signup');
@@ -19,7 +19,7 @@ class users_controller extends base_controller {
         # Render template
         echo $this->template;
     }
-
+    # register a new user into the database.
     public function p_signup() {
         #error checking : if not fullfilled, send the error message.
         if(!$_POST['first_name']||!$_POST['last_name']||!$_POST['email'] || !$_POST['password']){
@@ -34,7 +34,7 @@ class users_controller extends base_controller {
         $exist = DB::instance(DB_NAME)->select_field($q);     
         //compare POST with database already registered
         if($exist==$email){
-            die("Sign up failed. Your email $email is already registered");
+            Router::redirect('/users/signup/failed');
         }
         
         # More data we want stored with the user
@@ -59,14 +59,11 @@ class users_controller extends base_controller {
         $bcc = "";
     
         # Send email
-        //Email::send($to, $from, $subject, $body, true, $cc, $bcc);
-        echo "Mail sent. ";
-        
-        # For now, just confirm they've signed up - 
-        # You should eventually make a proper View for this
-        echo 'You\'re signed up as '. $_POST['first_name']." ". $_POST['last_name'];
-    }
+        Email::send($to, $from, $subject, $body, true, $cc, $bcc);
 
+        Router::redirect('/users/login/registered');
+    }
+    #interface of login page.
     public function login($error = NULL) {
 
         # Setup view
@@ -78,6 +75,7 @@ class users_controller extends base_controller {
         # Render template
         echo $this->template;
     }
+    # processes the request of a user's login.
     public function p_login() {
 
         # Sanitize the user entered data to prevent any funny-business (re: SQL Injection Attacks)
@@ -97,16 +95,6 @@ class users_controller extends base_controller {
 
         # If we didn't get a token back, it means login failed
         if(!$token) {
-            #checking specifically email or password
-            /*
-                if(){
-                    
-                }
-                else(
-
-                )
-            */
-            #checking specifically email or password
 
             # Send them back to the login page
             Router::redirect("/users/login/error");
@@ -148,10 +136,11 @@ class users_controller extends base_controller {
         Router::redirect("/");
     }
 
+    # Shows the profile of a user.
     public function profile() {
         #If user is blank, they're not logged in; redirect them to the login page
         if(!$this->user){
-            Router::redirect('/users/login');
+            Router::redirect('/users/login/login');
         }
 
         #If they weren't redirected away, continue:
@@ -159,10 +148,6 @@ class users_controller extends base_controller {
         #setup view
         $this->template->content =View::instance('v_users_profile');
         $this->template->title = "Profile of".$this->user->first_name;
-
-        # attach style.css in the head
-        //$client_files_head = Array("/css/main.css");
-        //$this->template->client_files_head = Utils::load_client_files($client_files_head);
 
         echo $this->template;
     }

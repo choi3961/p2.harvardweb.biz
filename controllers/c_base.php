@@ -1,5 +1,5 @@
 <?php
-#This is the parent of all controller
+#This is the parent of all controllers
 class base_controller {
 	
 	public $user;
