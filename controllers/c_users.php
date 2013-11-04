@@ -10,10 +10,11 @@ class users_controller extends base_controller {
         echo "This is the index page";
     }
 
-    public function signup() {
+    public function signup($error = NULL, $failed = NULL) {
         # Setup view
         $this->template->content = View::instance('v_users_signup');
-        $this->template->title   = "Sign Up";
+        $this->template->title = "Sign Up";
+        $this->template->content->error = $error;
              
         # Render template
         echo $this->template;
@@ -22,7 +23,7 @@ class users_controller extends base_controller {
     public function p_signup() {
         #error checking : if not fullfilled, send the error message.
         if(!$_POST['first_name']||!$_POST['last_name']||!$_POST['email'] || !$_POST['password']){
-            die("You should fullfill all the inputs");
+            Router::redirect("/users/signup/error");
         }
 
         #error checking : compare POST data with database data
@@ -33,7 +34,7 @@ class users_controller extends base_controller {
         $exist = DB::instance(DB_NAME)->select_field($q);     
         //compare POST with database already registered
         if($exist==$email){
-            die("Your email $email is already registered");
+            die("Sign up failed. Your email $email is already registered");
         }
         
         # More data we want stored with the user
@@ -145,7 +146,6 @@ class users_controller extends base_controller {
 
         # Send them back to the main index.
         Router::redirect("/");
-
     }
 
     public function profile() {

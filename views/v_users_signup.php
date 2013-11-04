@@ -10,6 +10,13 @@
         <input type='text' name='email'><br><br>
         Password <span class = 'required'>*</span><br>
         <input type='password' name='password'><br><br>
-        <input type='submit'>
+
+        <?php if(isset($error)): ?>
+        <div class='error'>
+            Sign up failed. Please fill out all the fields.
+        </div><br>
+        <?php endif; ?>
+        
+        <input type='submit' value = 'submit'>
     </form>
 </div>

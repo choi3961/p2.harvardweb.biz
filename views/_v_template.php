@@ -14,14 +14,16 @@
             <a href='/'>Home  </a> |
             <a href = '/posts/mypage/'> myposts </a> |
             <!-- Menu for users who are logged in -->
+
             <?php if($user): ?>
-                <a href='/users/logout'>Logout </a> |
-                <a href='/users/profile'>Profile  </a> |
+            <a href='/users/logout'>Logout </a> |
+            <a href='/users/profile'>Profile  </a> |
             <!-- Menu options for users who are not logged in -->
             <?php else: ?>
                 <a href='/users/signup'>Sign up </a> | 
                 <a href='/users/login'>Log in </a> |
             <?php endif; ?>
+            
             <a href="/posts/index">index </a> |
             <a href="/posts/users">users </a> |
             <a href="/posts/add">addPost </a>|
