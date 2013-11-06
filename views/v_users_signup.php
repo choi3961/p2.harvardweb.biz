@@ -4,13 +4,13 @@
     <!-- sign up interface page -->
     <form method='POST' action='/users/p_signup' class='form-standard'>
         First Name <span class = 'required'>*</span><br>
-        <input type='text' name='first_name'><br><br>
+        <input type='text' name='first_name' required><br><br>
         Last Name <span class = 'required'>*</span><br>
-        <input type='text' name='last_name'><br><br>
+        <input type='text' name='last_name' required><br><br>
         Email <span class = 'required'>*</span><br>
-        <input type='text' name='email'><br><br>
+        <input type='text' name='email' required><br><br>
         Password <span class = 'required'>*</span><br>
-        <input type='password' name='password'><br><br>
+        <input type='password' name='password' required><br><br>
 
         <?php if($error == 'error'): ?>
         <div class='error'>

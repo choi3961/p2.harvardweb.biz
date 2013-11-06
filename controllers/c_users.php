@@ -10,7 +10,7 @@ class users_controller extends base_controller {
         echo "This is the index page";
     }
     # renders interface of sign up
-    public function signup($error = NULL, $failed = NULL) {
+    public function signup($error = NULL) {
         # Setup view
         $this->template->content = View::instance('v_users_signup');
         $this->template->title = "Sign Up";
