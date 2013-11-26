@@ -1,5 +1,7 @@
 <?php
 
+echo "/hello index555";
+
 # The DOC_ROOT and APP_PATH constant have to happen in the actual app
 
 	# Document root, ex: /path/to/home/app.com/../ (uses ./ on CLI)
@@ -26,9 +28,10 @@
     	'/' => '/index',     # default controller when "/" is requested
     );
     
+    echo "hello Router init()";
 # Match requested uri to any routes and instantiate controller
     Router::init();
-    
+    echo "hello Router init()";
 # Display environment details
 	require CORE_PATH."environment-details.php";
 	
